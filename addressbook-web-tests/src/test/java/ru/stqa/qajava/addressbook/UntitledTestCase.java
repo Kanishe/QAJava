@@ -1,17 +1,14 @@
 package ru.stqa.qajava.addressbook;
-// System.setProperty("webdriver.chrome.driver","/Users/alexandrkanishevskii/IdeaProjects/chromedriver");
-// driver = new ChromeDriver();
 
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.*;
-import static org.testng.Assert.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
+import static org.testng.Assert.fail;
 
 public class UntitledTestCase {
   private WebDriver driver;
@@ -21,24 +18,35 @@ public class UntitledTestCase {
 
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
-
     System.setProperty("webdriver.chrome.driver","/Users/alexandrkanishevskii/IdeaProjects/chromedriver");
     driver = new ChromeDriver();
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-  }
-
-  @Test
-  public void testUntitledTestCase() throws Exception {
     driver.get("http://localhost/addressbook/index.php");
     driver.findElement(By.name("user")).click();
     driver.findElement(By.name("user")).clear();
     driver.findElement(By.name("user")).sendKeys("admin");
-    driver.findElement(By.id("nav")).click();
-    driver.findElement(By.name("pass")).click();
     driver.findElement(By.name("pass")).clear();
     driver.findElement(By.name("pass")).sendKeys("secret");
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Пароль:'])[1]/following::input[2]")).click();
+
+  }
+
+  @Test
+  public void testUntitledTestCase() throws Exception {
+    driver.findElement(By.linkText("Группы")).click();
+    driver.findElement(By.name("new")).click();
+    driver.findElement(By.name("group_name")).click();
+    driver.findElement(By.name("group_name")).clear();
+    driver.findElement(By.name("group_name")).sendKeys("testnamegroup");
+    driver.findElement(By.name("group_header")).click();
+    driver.findElement(By.name("group_header")).clear();
+    driver.findElement(By.name("group_header")).sendKeys("testheadergroup");
+    driver.findElement(By.name("group_footer")).click();
+    driver.findElement(By.name("group_footer")).clear();
+    driver.findElement(By.name("group_footer")).sendKeys("testfootergroup");
+    driver.findElement(By.name("submit")).click();
+    driver.findElement(By.linkText("Главная")).click();
   }
 
   @AfterClass(alwaysRun = true)
