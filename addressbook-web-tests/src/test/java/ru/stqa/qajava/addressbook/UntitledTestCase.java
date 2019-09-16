@@ -23,15 +23,15 @@ public class UntitledTestCase {
     baseUrl = "https://www.katalon.com/";
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/index.php");
-    login();
+    login("admin", "secret");
   }
 
-  private void login() {
+  private void login(String username, String password) {
     wd.findElement(By.name("user")).click();
     wd.findElement(By.name("user")).clear();
-    wd.findElement(By.name("user")).sendKeys("admin");
+    wd.findElement(By.name("user")).sendKeys(username);
     wd.findElement(By.name("pass")).clear();
-    wd.findElement(By.name("pass")).sendKeys("secret");
+    wd.findElement(By.name("pass")).sendKeys(password);
     wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Пароль:'])[1]/following::input[2]")).click();
   }
 
@@ -39,7 +39,7 @@ public class UntitledTestCase {
   public void testUntitledTestCase() throws Exception {
     goToGroupPage();
     initGroupCreation();
-    fillGroupForm();
+    fillGroupForm(new GroupData("testnamegroup", "testheadergroup", "testfootergroup"));
     submitGroupCreation();
     returnToHeadPage();
   }
@@ -52,16 +52,16 @@ public class UntitledTestCase {
     wd.findElement(By.name("submit")).click();
   }
 
-  private void fillGroupForm() {
+  private void fillGroupForm(GroupData groupData) {
     wd.findElement(By.name("group_name")).click();
     wd.findElement(By.name("group_name")).clear();
-    wd.findElement(By.name("group_name")).sendKeys("testnamegroup");
+    wd.findElement(By.name("group_name")).sendKeys(groupData.getNamegroup());
     wd.findElement(By.name("group_header")).click();
     wd.findElement(By.name("group_header")).clear();
-    wd.findElement(By.name("group_header")).sendKeys("testheadergroup");
+    wd.findElement(By.name("group_header")).sendKeys(groupData.getHeadergroup());
     wd.findElement(By.name("group_footer")).click();
     wd.findElement(By.name("group_footer")).clear();
-    wd.findElement(By.name("group_footer")).sendKeys("testfootergroup");
+    wd.findElement(By.name("group_footer")).sendKeys(groupData.getFootergroup());
   }
 
   private void initGroupCreation() {
