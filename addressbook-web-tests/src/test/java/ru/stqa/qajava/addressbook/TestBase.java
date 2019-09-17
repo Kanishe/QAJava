@@ -4,14 +4,14 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.fail;
 
-public class UntitledTestCase {
-  private WebDriver wd;
+public class TestBase {
+
+  public WebDriver wd;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
@@ -35,24 +35,15 @@ public class UntitledTestCase {
     wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Пароль:'])[1]/following::input[2]")).click();
   }
 
-  @Test
-  public void testUntitledTestCase() throws Exception {
-    goToGroupPage();
-    initGroupCreation();
-    fillGroupForm(new GroupData("testnamegroup", "testheadergroup", "testfootergroup"));
-    submitGroupCreation();
-    returnToHeadPage();
-  }
-
-  private void returnToHeadPage() {
+  protected void returnToHeadPage() {
     wd.findElement(By.linkText("Главная")).click();
   }
 
-  private void submitGroupCreation() {
+  protected void submitGroupCreation() {
     wd.findElement(By.name("submit")).click();
   }
 
-  private void fillGroupForm(GroupData groupData) {
+  protected void fillGroupForm(GroupData groupData) {
     wd.findElement(By.name("group_name")).click();
     wd.findElement(By.name("group_name")).clear();
     wd.findElement(By.name("group_name")).sendKeys(groupData.getNamegroup());
@@ -64,11 +55,11 @@ public class UntitledTestCase {
     wd.findElement(By.name("group_footer")).sendKeys(groupData.getFootergroup());
   }
 
-  private void initGroupCreation() {
+  protected void initGroupCreation() {
     wd.findElement(By.name("new")).click();
   }
 
-  private void goToGroupPage() {
+  protected void goToGroupPage() {
     wd.findElement(By.linkText("Группы")).click();
   }
 
