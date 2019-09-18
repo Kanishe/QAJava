@@ -1,25 +1,25 @@
 package ru.stqa.qajava.addressbook;
 
 public class GroupData {
-  private final String namegroup;
-  private final String headergroup;
-  private final String footergroup;
+  private final String name;
+  private final String header;
+  private final String footer;
 
-  public GroupData(String namegroup, String headergroup, String footergroup) {
-    this.namegroup = namegroup;
-    this.headergroup = headergroup;
-    this.footergroup = footergroup;
+  public GroupData(String name, String header, String footer) {
+    this.name = name;
+    this.header = header;
+    this.footer = footer;
   }
 
-  public String getNamegroup() {
-    return namegroup;
+  public String getName() {
+    return name;
   }
 
-  public String getHeadergroup() {
-    return headergroup;
+  public String getHeader() {
+    return header;
   }
 
-  public String getFootergroup() {
-    return footergroup;
+  public String getFooter() {
+    return footer;
   }
 }
