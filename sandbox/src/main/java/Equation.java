@@ -12,8 +12,6 @@ public class Equation {
     this.a = a;
     this.b = b;
     this.c = c;
-
-
     double d = b * b - 4 * a * c;
 
 
