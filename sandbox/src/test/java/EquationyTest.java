@@ -21,4 +21,9 @@ public class EquationyTest {
     Assert.assertEquals(e.rootNumber(),2);
 
   }
+  @Test
+  public void test3(){
+    Equation e =new Equation(2,35,6);
+    Assert.assertEquals(e.rootNumber(),2);
+  }
 }

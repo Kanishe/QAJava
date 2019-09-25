@@ -2,6 +2,8 @@ package ru.stqa.qajava.addressbook.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
@@ -9,14 +11,25 @@ public class ApplicationManager {
   public WebDriver wd;
   private NavigationHelper navigationHelper;
   private GroupHelper groupHelper ;
+  private String browser ;
   private SessionHelper sessionHelper ;
   public StringBuffer verificationErrors = new StringBuffer();
   private String baseUrl;
   private boolean acceptNextAlert = true;
 
+  public ApplicationManager(String browser) {
+    this.browser=browser;
+  }
+
   public void init() {
-    System.setProperty("webdriver.chrome.driver","/Users/alexandrkanishevskii/IdeaProjects/chromedriver");
-    wd = new ChromeDriver();
+    if (browser==BrowserType.GOOGLECHROME){
+      System.setProperty("webdriver.chrome.driver","/Users/alexandrkanishevskii/IdeaProjects/chromedriver");
+      wd = new ChromeDriver();
+    } else if (browser==BrowserType.FIREFOX){
+      System.setProperty("webdriver.gecko.driver","/Users/alexandrkanishevskii/IdeaProjects/geckodriver");
+      wd = new FirefoxDriver();
+    }
+
     baseUrl = "https://www.katalon.com/";
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/index.php");
