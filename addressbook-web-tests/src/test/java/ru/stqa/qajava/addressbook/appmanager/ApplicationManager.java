@@ -22,10 +22,10 @@ public class ApplicationManager {
   }
 
   public void init() {
-    if (browser==BrowserType.GOOGLECHROME){
+    if (browser.equals(BrowserType.GOOGLECHROME)){
       System.setProperty("webdriver.chrome.driver","/Users/alexandrkanishevskii/IdeaProjects/chromedriver");
       wd = new ChromeDriver();
-    } else if (browser==BrowserType.FIREFOX){
+    } else if (browser.equals(BrowserType.FIREFOX)){
       System.setProperty("webdriver.gecko.driver","/Users/alexandrkanishevskii/IdeaProjects/geckodriver");
       wd = new FirefoxDriver();
     }
