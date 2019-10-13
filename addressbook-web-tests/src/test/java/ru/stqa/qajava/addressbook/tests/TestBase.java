@@ -9,7 +9,7 @@ import ru.stqa.qajava.addressbook.appmanager.ApplicationManager;
 
 public class TestBase {
 
-  public final ApplicationManager app = new ApplicationManager(BrowserType.GOOGLECHROME);
+  public final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
 
   @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
