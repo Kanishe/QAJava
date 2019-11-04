@@ -2,12 +2,12 @@ package ru.stqa.qajava.addressbook.model;
 
 public class GroupData {
   private final String groupName;
-  private final String gropupHeader;
+  private final String groupHeader;
   private final String groupFooter;
 
-  public GroupData(String groupName, String gropupHeader, String groupFooter) {
+  public GroupData(String groupName, String groupHeader, String groupFooter) {
     this.groupName = groupName;
-    this.gropupHeader = gropupHeader;
+    this.groupHeader = groupHeader;
     this.groupFooter = groupFooter;
   }
 
@@ -15,8 +15,8 @@ public class GroupData {
     return groupName;
   }
 
-  public String getGropupHeader() {
-    return gropupHeader;
+  public String getGroupHeader() {
+    return groupHeader;
   }
 
   public String getGroupFooter() {
