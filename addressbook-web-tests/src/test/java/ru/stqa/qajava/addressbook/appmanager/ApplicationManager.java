@@ -47,14 +47,7 @@ public class ApplicationManager {
     }
   }
 
-  private boolean isAlertPresent() {
-    try {
-      driver.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
-  }
+
 
   private String closeAlertAndGetItsText() {
     try {
