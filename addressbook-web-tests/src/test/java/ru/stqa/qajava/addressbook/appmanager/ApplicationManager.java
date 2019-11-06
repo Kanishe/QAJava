@@ -25,10 +25,10 @@ public class ApplicationManager {
 
   public void init() {
 
-    if (browser.equals(BrowserType.FIREFOX)){
+    if (browser.equals(BrowserType.CHROME)){
       System.setProperty("webdriver.gecko.driver","/Users/alexandrkanishevskii/IdeaProjects/QAJava/addressbook-web-tests/src/test/resources/geckodriver");
       driver= new FirefoxDriver();
-    }else {
+    } else {
       System.setProperty("webdriver.chrome.driver","/Users/alexandrkanishevskii/IdeaProjects/QAJava/addressbook-web-tests/src/test/resources/chromedriver");
       driver = new ChromeDriver();
     }
