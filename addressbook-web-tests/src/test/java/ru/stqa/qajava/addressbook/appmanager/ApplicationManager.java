@@ -25,12 +25,12 @@ public class ApplicationManager {
 
   public void init() {
 
-    if (browser== BrowserType.FIREFOX){
+    if (browser.equals(BrowserType.FIREFOX)){
       System.setProperty("webdriver.gecko.driver","/Users/alexandrkanishevskii/IdeaProjects/QAJava/addressbook-web-tests/src/test/resources/geckodriver");
       driver= new FirefoxDriver();
     }else {
       System.setProperty("webdriver.chrome.driver","/Users/alexandrkanishevskii/IdeaProjects/QAJava/addressbook-web-tests/src/test/resources/chromedriver");
-      driver= new ChromeDriver();
+      driver = new ChromeDriver();
     }
 
     baseUrl = "https://www.katalon.com/";
