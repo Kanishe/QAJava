@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b336bd31-fef0-4624-bf78-8c37d4d9a5ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/qajava/addressbook/model/ContactData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/src/main/java/Primes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandbox/src/test/java/PrimeTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sandbox/src/main/java/Collections.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sandbox/.gradle/" />
@@ -58,42 +56,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/qajava/addressbook/appmanager/GroupHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#396#397#0" expanded="true" />
-                <element signature="e#430#431#0" expanded="true" />
-                <element signature="e#1064#1065#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/Primes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sandbox/src/test/java/PrimeTests.java">
+        <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/Collections.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="45">
+              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#122#123#0" expanded="true" />
-                <element signature="e#150#151#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,12 +142,13 @@
         <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/qajava/addressbook/model/ContactData.java" />
         <option value="$PROJECT_DIR$/sandbox/src/main/java/Primes.java" />
         <option value="$PROJECT_DIR$/sandbox/src/test/java/PrimeTests.java" />
+        <option value="$PROJECT_DIR$/sandbox/src/main/java/Collections.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="133" />
-    <option name="y" value="394" />
+    <option name="x" value="161" />
+    <option name="y" value="112" />
     <option name="width" value="1377" />
     <option name="height" value="878" />
   </component>
@@ -375,7 +345,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573990979103" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573995152975" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/addressbook-web-tests/src/test/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -408,9 +378,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.PrimeTests">
-    <configuration name="Equality" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Equality" />
+  <component name="RunManager" selected="Application.Collections">
+    <configuration name="Collections" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Collections" />
       <module name="sandbox.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -478,11 +448,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Collections" />
         <item itemvalue="TestNG.PrimeTests" />
         <item itemvalue="TestNG.ru.stqa.qajava.addressbook.model" />
         <item itemvalue="TestNG.GroupCreationTest.testGroupCreation" />
         <item itemvalue="TestNG.GroupCreationTest" />
-        <item itemvalue="Application.Equality" />
       </list>
     </recent_temporary>
   </component>
@@ -526,7 +496,7 @@
       <workItem from="1573500499089" duration="1187000" />
       <workItem from="1573672965480" duration="1285000" />
       <workItem from="1573759665733" duration="19000" />
-      <workItem from="1573985550622" duration="3077000" />
+      <workItem from="1573985550622" duration="5615000" />
     </task>
     <task id="LOCAL-00001" summary="add testNG">
       <created>1566733856202</created>
@@ -571,7 +541,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91248000" />
+    <option name="totallyTimeSpent" value="93786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -583,7 +553,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="133" y="394" width="1377" height="878" extended-state="0" />
+    <frame x="161" y="112" width="1377" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.317603" />
@@ -643,7 +613,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/qajava/addressbook/а.js" />
     <entry file="file:///Applications/XAMPP/htdocs/addressbook/include/login.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -1049,6 +1018,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0/5a0241ace5a7b8eb3d31556a7d5dd2b3aae9baf/testng-7.0.0-sources.jar!/org/testng/Assert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="e#1689#1690#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/test/java/PrimeTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#122#123#0" expanded="true" />
+            <element signature="e#150#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/Primes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1072,25 +1064,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0/5a0241ace5a7b8eb3d31556a7d5dd2b3aae9baf/testng-7.0.0-sources.jar!/org/testng/Assert.java">
+    <entry file="file://$PROJECT_DIR$/sandbox/src/main/java/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding>
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1726#1727#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/src/test/java/PrimeTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="45">
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#122#123#0" expanded="true" />
-            <element signature="e#150#151#0" expanded="true" />
           </folding>
         </state>
       </provider>
