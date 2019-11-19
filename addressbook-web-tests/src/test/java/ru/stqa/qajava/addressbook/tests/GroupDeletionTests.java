@@ -1,5 +1,6 @@
 package ru.stqa.qajava.addressbook.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class GroupDeletionTests extends TestBase {
@@ -11,6 +12,7 @@ public class GroupDeletionTests extends TestBase {
     app.getGroupHelper().selectGroup();
     app.getGroupHelper().deleteSelectedGroups();
     app.getGroupHelper().reternToGroupPage();
+
   }
 
 }

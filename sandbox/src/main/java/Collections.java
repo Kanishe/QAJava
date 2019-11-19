@@ -17,6 +17,7 @@ public class Collections {
       System.out.println(languages);
     }
 
+
   //  for (int i=0; i<langs.length;i++){
   //    System.out.println("I learn: " + langs[i]);
    // or use for each<<

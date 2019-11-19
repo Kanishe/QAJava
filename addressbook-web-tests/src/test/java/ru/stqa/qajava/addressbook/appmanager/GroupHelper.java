@@ -44,4 +44,13 @@ public class GroupHelper extends HelperBase {
   public void submitGroupModification() {//метод принятия можификации группы
     click(By.name("update"));
   }
+
+
+  /** Метод возвращает кол-во элементов
+   *
+    * @return
+   */
+  public int GetGroupCount() {
+    return driver.findElements(By.name("selected[]")).size();
+  }
 }
