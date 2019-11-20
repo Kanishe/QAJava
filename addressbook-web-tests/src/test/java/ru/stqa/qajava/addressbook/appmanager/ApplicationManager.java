@@ -26,16 +26,18 @@ public class ApplicationManager {
   public void init() {
 
     if (browser.equals(BrowserType.CHROME)){
-      System.setProperty("webdriver.gecko.driver","/Users/alexandrkanishevskii/IdeaProjects/QAJava/addressbook-web-tests/src/test/resources/geckodriver");
-      driver= new FirefoxDriver();
-    } else {
       System.setProperty("webdriver.chrome.driver","/Users/alexandrkanishevskii/IdeaProjects/QAJava/addressbook-web-tests/src/test/resources/chromedriver");
       driver = new ChromeDriver();
+
+    } else {
+      System.setProperty("webdriver.gecko.driver","/Users/alexandrkanishevskii/IdeaProjects/QAJava/addressbook-web-tests/src/test/resources/geckodriver");
+      driver= new FirefoxDriver();
+
     }
 
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driver.get("http://localhost/addressbook/group.php");
+    driver.get("http://localhost/addressbook");
     groupHelper = new GroupHelper(driver);
     navigationHelper = new NavigationHelper(driver);
     sessionHelper = new SessionHelper(driver);
