@@ -7,7 +7,7 @@ import ru.stqa.qajava.addressbook.appmanager.ApplicationManager;
 
 public class TestBase {
 
-  protected final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);// Делегирование//передаем в класс переменную выбранного браузера
+  protected final ApplicationManager app = new ApplicationManager(BrowserType.CHROME);// Делегирование//передаем в класс переменную выбранного браузера
 
   @BeforeMethod
   public void setUp() throws Exception {
