@@ -14,7 +14,7 @@ public class GroupCreationTest extends TestBase{
     GroupHelper groupHelper=app.getGroupHelper();
     int before=groupHelper.GetGroupCount();
     groupHelper.initGroupCreation();
-    groupHelper.fillGroupForm(new GroupData("te", null, null));
+    groupHelper.fillGroupForm(new GroupData("test40", "40", "40"));
     groupHelper.submitGroupCreation();
     groupHelper.reternToGroupPage();
     int after=groupHelper.GetGroupCount();
