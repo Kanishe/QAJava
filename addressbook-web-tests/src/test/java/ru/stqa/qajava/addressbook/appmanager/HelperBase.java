@@ -3,6 +3,7 @@ package ru.stqa.qajava.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
+import ru.stqa.qajava.addressbook.model.GroupData;
 
 public class HelperBase {
 
@@ -32,5 +33,8 @@ public class HelperBase {
     } catch (NoAlertPresentException e) {
       return false;
     }
+  }
+
+  public void createGroup(GroupData group) {
   }
 }

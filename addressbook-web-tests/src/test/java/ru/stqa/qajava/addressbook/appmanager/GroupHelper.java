@@ -55,6 +55,14 @@ public class GroupHelper extends HelperBase {
   }
 
 
+  public void createGroup(GroupData group) {
+    initGroupCreation();
+    fillGroupForm(group);
+    submitGroupCreation();
+    reternToGroupPage();
+  }
+
+
   /** Метод возвращает кол-во элементов
    *
     * @return By.name(selected[])).size()
@@ -71,8 +79,8 @@ public class GroupHelper extends HelperBase {
     List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
     for(WebElement element: elements ){
       String nameElement=element.getText();
-      String id = element.findElement(By.tagName("input")).getAttribute("value");
-      GroupData groupData=new GroupData(nameElement, null,null, id);
+      int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+      GroupData groupData=new GroupData(id,nameElement, null,null);
       groups.add(groupData);
     }
       return groups;
