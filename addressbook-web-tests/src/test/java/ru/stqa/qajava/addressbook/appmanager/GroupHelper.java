@@ -65,10 +65,9 @@ public class GroupHelper extends HelperBase {
   }
 
   /** Метод для создания списка элементов
-   *
    * @return groups
    */
-  public List<GroupData> getGroupList() {
+  public List<GroupData> getGroupList() {//todo разобрать
     List<GroupData>groups=new ArrayList<GroupData>();
     List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
     for(WebElement element: elements ){
