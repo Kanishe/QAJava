@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ru.stqa.qajava.addressbook.model.GroupData;
 
-import javax.lang.model.element.Element;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,7 +71,8 @@ public class GroupHelper extends HelperBase {
     List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
     for(WebElement element: elements ){
       String nameElement=element.getText();
-      GroupData groupData=new GroupData(nameElement, null,null);
+      String id = element.findElement(By.tagName("input")).getAttribute("value");
+      GroupData groupData=new GroupData(nameElement, null,null, id);
       groups.add(groupData);
     }
       return groups;
