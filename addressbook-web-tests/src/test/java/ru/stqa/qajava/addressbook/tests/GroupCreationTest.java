@@ -2,11 +2,9 @@ package ru.stqa.qajava.addressbook.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.stqa.qajava.addressbook.appmanager.GroupHelper;
 import ru.stqa.qajava.addressbook.model.GroupData;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 
