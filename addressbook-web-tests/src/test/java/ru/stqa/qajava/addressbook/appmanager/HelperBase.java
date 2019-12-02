@@ -5,6 +5,8 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import ru.stqa.qajava.addressbook.model.GroupData;
 
+import java.util.NoSuchElementException;
+
 public class HelperBase {
 
   protected WebDriver driver;
@@ -35,6 +37,16 @@ public class HelperBase {
     }
   }
 
-  public void createGroup(GroupData group) {
+  public boolean isElementPresent(By by) {
+    try {
+      driver.findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+    catch (Exception e)
+    {
+      return false;
+    }
   }
 }
