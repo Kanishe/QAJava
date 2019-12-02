@@ -7,6 +7,7 @@ import ru.stqa.qajava.addressbook.model.GroupData;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class GroupHelper extends HelperBase {
 
@@ -62,9 +63,21 @@ public class GroupHelper extends HelperBase {
     reternToGroupPage();
   }
 
+  /**
+   * Метод модификации группы
+   * @param index
+   * @param group
+   */
+  public void modifyGroup(int index, GroupData group) {
+    selectGroup(index);
+    initGroupModification();
+    fillGroupForm(group);
+    submitGroupModification();
+    reternToGroupPage();
+  }
+
 
   /** Метод возвращает кол-во элементов
-   *
     * @return By.name(selected[])).size()
    */
   public int GetGroupCount() {
@@ -85,4 +98,12 @@ public class GroupHelper extends HelperBase {
     }
       return groups;
   }
-}
+
+  public boolean isThereAGroup() {
+    return isElementPresent(By.name("selected[]"));
+  }
+
+
+  }
+
+
