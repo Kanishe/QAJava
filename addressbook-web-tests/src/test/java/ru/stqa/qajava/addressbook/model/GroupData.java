@@ -1,23 +1,26 @@
 package ru.stqa.qajava.addressbook.model;
 
 public class GroupData {
-  private int id;
-  private final String groupName;
-  private final String groupHeader;
-  private final String groupFooter;
+  private int id = Integer.MAX_VALUE;
+  private  String groupName;
+  private  String groupHeader;
+  private  String groupFooter;
 
-  public GroupData(String groupName, String groupHeader, String groupFooter) {
-    this.id = Integer.MAX_VALUE;
+
+
+  public GroupData withName(String groupName) {
     this.groupName = groupName;
-    this.groupHeader = groupHeader;
-    this.groupFooter = groupFooter;
+    return this;
   }
 
-  public GroupData(int id, String groupName, String groupHeader, String groupFooter) {
-    this.id = id;
-    this.groupName = groupName;
+  public GroupData withHeader(String groupHeader) {
     this.groupHeader = groupHeader;
+    return this;
+  }
+
+  public GroupData withFooter(String groupFooter) {
     this.groupFooter = groupFooter;
+    return this;
   }
 
 
@@ -29,6 +32,17 @@ public class GroupData {
 
   public int getId() {
     return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public GroupData whithId(int max) {
+    this.id=id;
+    return this;
+
+
   }
   public String getGroupName() {
     return groupName;
@@ -42,9 +56,7 @@ public class GroupData {
     return groupFooter;
   }
 
-  public void setId(int max) {
-    this.id=id;
-  }
+
   @Override
   public String toString() {
     return "GroupData{" +
