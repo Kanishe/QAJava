@@ -56,7 +56,7 @@ public class GroupHelper extends HelperBase {
   }
 
 
-  public void createGroup(GroupData group) {
+  public void create(GroupData group) {
     initGroupCreation();
     fillGroupForm(group);
     submitGroupCreation();
@@ -68,7 +68,7 @@ public class GroupHelper extends HelperBase {
    * @param index
    * @param group
    */
-  public void modifyGroup(int index, GroupData group) {
+  public void modify(int index, GroupData group) {
     selectGroup(index);
     initGroupModification();
     fillGroupForm(group);
@@ -76,6 +76,15 @@ public class GroupHelper extends HelperBase {
     reternToGroupPage();
   }
 
+  /**
+   * Метод для удаления групп
+   * @param index
+   */
+  public void delete(int index) {
+  selectGroup(index);
+  deleteSelectedGroups();
+  reternToGroupPage();
+}
 
   /** Метод возвращает кол-во элементов
     * @return By.name(selected[])).size()
@@ -87,7 +96,7 @@ public class GroupHelper extends HelperBase {
   /** Метод для создания списка элементов
    * @return groups
    */
-  public List<GroupData> getGroupList() {//todo разобрать
+  public List<GroupData> list() {//todo разобрать
     List<GroupData>groups=new ArrayList<GroupData>();
     List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
     for(WebElement element: elements ){
