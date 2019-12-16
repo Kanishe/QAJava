@@ -5,9 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ru.stqa.qajava.addressbook.model.GroupData;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class GroupHelper extends HelperBase {
 
@@ -105,6 +103,18 @@ public class GroupHelper extends HelperBase {
       groups.add(new GroupData().whithId(id).withName("test1"));
     }
       return groups;
+  }
+
+
+  public Set<GroupData> all() {//todo разобрать
+    Set<GroupData> groups=new HashSet<>();
+    List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
+    for(WebElement element: elements ){
+      String nameElement=element.getText();
+      int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+      groups.add(new GroupData().whithId(id).withName("test1"));
+    }
+    return groups;
   }
 
   public boolean isThereAGroup() {
